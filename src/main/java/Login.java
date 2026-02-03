@@ -1,4 +1,7 @@
+import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Login {
@@ -7,6 +10,13 @@ public class Login {
         driver.manage().window().maximize();
         // adding new changes here
         driver.get("https://demoqa.com/webtables");
+
+        //assertion for Web Tables text
+        String expectedText = "Web Tables";
+        WebElement actualText1 = driver.findElement(By.xpath("//h1[contains(text(),Web)]"));
+        String actualText = actualText1.getText();
+        Assert.assertEquals(expectedText,actualText);
+
         // adding new change from another account
         driver.quit();
     }

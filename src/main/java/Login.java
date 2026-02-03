@@ -6,5 +6,9 @@ public class Login {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
       
+        // adding new changes here
+        driver.get("https://demoqa.com/webtables");
+        // adding new change from another account
+        driver.quit();
     }
 }

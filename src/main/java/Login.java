@@ -11,6 +11,7 @@ public class Login {
         // adding new changes here
         driver.get("https://demoqa.com/webtables");
 
+        System.out.println("for testing");
         //assertion for Web Tables text
         String expectedText = "Web Tables";
         WebElement actualText1 = driver.findElement(By.xpath("//h1[contains(text(),Web)]"));

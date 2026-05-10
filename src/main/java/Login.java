@@ -19,6 +19,7 @@ public class Login {
         Assert.assertEquals(expectedText,actualText);
 
         System.out.println("testing if the jenkins setup is correct");
+        System.out.println("testing");
         // adding new change from another account
         driver.quit();
     }

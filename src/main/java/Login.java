@@ -17,9 +17,6 @@ public class Login {
         WebElement actualText1 = driver.findElement(By.xpath("//h1[contains(text(),Web)]"));
         String actualText = actualText1.getText();
         Assert.assertEquals(expectedText,actualText);
-
-        System.out.println("testing if the jenkins setup is correct");
-        System.out.println("for testing");
         // adding new change from another account
         driver.quit();
     }

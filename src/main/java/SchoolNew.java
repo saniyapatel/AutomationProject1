@@ -1,3 +1,4 @@
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,8 +18,10 @@ public class SchoolNew {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
             By tableBody = By.xpath("//tbody//tr//th[text()='Company']");
-            wait.until(ExpectedConditions.visibilityOfElementLocated(tableBody));
-            
+
+            String expectedResult = "Common";
+            String actualResult = wait.until(ExpectedConditions.visibilityOfElementLocated(tableBody)).getText();
+            Assert.assertEquals(expectedResult, actualResult);
         }
     }
 

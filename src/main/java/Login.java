@@ -10,7 +10,7 @@ public class Login {
         driver.manage().window().maximize();
         // adding new changes here
         driver.get("https://demoqa.com/webtables");
-
+        System.out.println("for testing 123");
         System.out.println("for testing");
         //assertion for Web Tables text
         String expectedText = "Web Tables";

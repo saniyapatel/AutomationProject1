@@ -22,6 +22,7 @@ public class SchoolNew {
             String expectedResult = "Common";
             String actualResult = wait.until(ExpectedConditions.visibilityOfElementLocated(tableBody)).getText();
             Assert.assertEquals(expectedResult, actualResult);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(tableBody));
         }
     }
 

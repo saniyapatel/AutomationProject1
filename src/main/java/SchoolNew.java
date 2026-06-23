@@ -18,7 +18,7 @@ public class SchoolNew {
 
             By tableBody = By.xpath("//tbody//tr//th[text()='Company']");
             WebElement displayBodyElm = wait.until(ExpectedConditions.visibilityOfElementLocated(tableBody));
-            System.out.println(displayBodyElm.getText());
+            System.out.println("Text of web element is "+displayBodyElm.getText());
         }
     }
 
